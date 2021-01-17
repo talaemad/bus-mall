@@ -18,26 +18,26 @@ function theImages(name, source) {
     allImg.push(this);
 }
 
-new theImages('bag', '../img/bag.jpg');
-new theImages('banana', '../img/banana.jpg');
-new theImages('bathroom', '../img/bathroom.jpg');
-new theImages('boots', '../img/boots.jpg');
-new theImages('breakfast', '../img/breakfast.jpg');
-new theImages('bubblegum', '../img/bubblegum.jpg');
-new theImages('chair', '../img/chair.jpg');
-new theImages('cthulhu', '../img/cthulhu.jpg');
-new theImages('dog-duck', '../img/dog-duck.jpg');
-new theImages('dragon', '../img/dragon.jpg');
-new theImages('pen', '../img/pen.jpg');
-new theImages('pet-sweep', '../img/pet-sweep.jpg');
-new theImages('scissors', '../img/scissors.jpg');
-new theImages('shark', '../img/shark.jpg');
-new theImages('sweep', '../img/sweep.png');
-new theImages('tauntaun', '../img/tauntaun.jpg');
-new theImages('unicorn', '../img/unicorn.jpg');
-new theImages('usb', '../img/usb.gif');
-new theImages('water-can', '../img/water-can.jpg');
-new theImages('wine-glass', '../img/wine-glass.jpg');
+new theImages('bag', 'img/bag.jpg');
+new theImages('banana', 'img/banana.jpg');
+new theImages('bathroom', 'img/bathroom.jpg');
+new theImages('boots', 'img/boots.jpg');
+new theImages('breakfast', 'img/breakfast.jpg');
+new theImages('bubblegum', 'img/bubblegum.jpg');
+new theImages('chair', 'img/chair.jpg');
+new theImages('cthulhu', 'img/cthulhu.jpg');
+new theImages('dog-duck', 'img/dog-duck.jpg');
+new theImages('dragon', 'img/dragon.jpg');
+new theImages('pen', 'img/pen.jpg');
+new theImages('pet-sweep', 'img/pet-sweep.jpg');
+new theImages('scissors', 'img/scissors.jpg');
+new theImages('shark', 'img/shark.jpg');
+new theImages('sweep', 'img/sweep.png');
+new theImages('tauntaun', 'img/tauntaun.jpg');
+new theImages('unicorn', 'img/unicorn.jpg');
+new theImages('usb', 'img/usb.gif');
+new theImages('water-can', 'img/water-can.jpg');
+new theImages('wine-glass', 'img/wine-glass.jpg');
 
 function renderRandomImgs() {
     leftImgIndex = generateRandomIndex();
