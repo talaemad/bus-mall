@@ -76,7 +76,7 @@ rightImg.addEventListener('click', handleUserClick);
 
 function handleUserClick(event) {
     userAttemptsCounter++;
-    if (userAttemptsCounter < maxAttempts) {
+    if (userAttemptsCounter <= maxAttempts) {
         if (event.target.id === 'left-img') {
             allImg[leftImgIndex].votes++;
         } else if (event.target.id === 'middle-img') {
