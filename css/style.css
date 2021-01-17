@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300&display=swap');
+body{
+    width: 950px;
+    margin: auto;
+    color: #00007f;
+    background-color: darkgrey;
+    font-family: 'Fraunces', serif;
+    font-weight: bold;
+
+}
+#left-img,#middle-img,#right-img{
+    width: 250px;
+    height: 250px;
+    padding-left: 20px;
+ 
+}
+#show-result{
+    visibility:hidden;
+    font-size: 15px;
+    width: 115px;
+    height: 50px;
+    margin: auto;
+    color:#00007f;
+    font-weight: bold;
+}
+.imgs{
+    width: fit-content;
+   margin:50px auto;
+}
+header{
+    height: 150px;
+    position: relative;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+p{
+    text-align: center;
+    line-height: 1.5;
+    margin: auto;
+}
+main section p:first-child{
+    font-size: 30px;
+}
+main section p:nth-child(2){
+    font-size: 20px;
+}
+header p{
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 350px;
+    transform: translateY(-50%);
+    margin: auto;
+}
+header nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    float: right;
+    padding-right: 50px;
+}
+#form{
+    border: 1px solid #00007f;
+    width: 500px;
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    padding: 20px;
+    line-height: 1.5;
+    margin: auto;
+}
+#input{
+    width: 150px;
+}
+#submit{
+    width: 100px;
+    height: 25px;
+    color:#00007f;
+    font-weight: bold;
+}
+#Result{
+    list-style-type: circle;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-left:auto;
+    margin-bottom: 30px;
+}
+
+footer{
+    
+    height: 75px;
+    text-align: center;
+}
