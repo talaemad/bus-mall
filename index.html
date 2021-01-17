@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="img/logo.png" alt="">
+        <p>The Bus Mall</p>
+        <nav>
+            <img src="img/mail.png" alt="">
+            <img src="img/fb.png" alt="">
+            <img src="img/twit.png" alt="">
+        </nav>
+    </header>
+    <main>
+        <section>
+            <p>Welcome to vote on some products</p>
+            <p>We are going to collect the results to enhance our catalog for you</p>
+            <form id="form">
+                <fieldset>
+                    <label for="input">Insert the number of rounds that you want</label> <br>
+                    <input type="number" step="1" max="25" min="0" id="input"> <br>
+                    <input type="submit" id="submit">
+                </fieldset>
+            </form>
+        </section>
+        <section class="imgs">
+            <img id="left-img" src="" alt="">
+            <img id="middle-img" src="" alt="">
+            <img id="right-img" src="" alt="">
+        </section>
+        <section>
+            <form id="theResult">
+                <input type="submit" value="Show Result" id="show-result">
+            </form>
+            <ul id="Result"></ul>
+        </section>
+
+    </main>
+    <footer>
+        <p>
+            Bus Mall © 2021 . All Rights Reserved.
+        </p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
