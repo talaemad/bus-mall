@@ -1,35 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300&display=swap');
 body{
-    width: 950px;
-    margin: auto;
-    color: #00007f;
-    background-color: darkgrey;
+    color: #374045;
+    background-color: #ffeebb;
     font-family: 'Fraunces', serif;
     font-weight: bold;
-
 }
-#left-img,#middle-img,#right-img{
-    width: 250px;
-    height: 250px;
-    padding-left: 20px;
- 
-}
-#show-result{
-    visibility:hidden;
-    font-size: 15px;
-    width: 115px;
-    height: 50px;
-    margin: auto;
-    color:#00007f;
-    font-weight: bold;
-}
-.imgs{
-    width: fit-content;
-   margin:50px auto;
-}
-header{
-    height: 150px;
+/* The Header */
+header {
     position: relative;
+    background: linear-gradient(
+      90deg,
+      #f1aa9b 0%,
+      #2c061f 100%);
+    width: 100%;
+    height: 200px;
+}
+i{
+    font-size: 30px;
+    color:#ffeebb;
+    padding: 5px;
+}
+i:hover{
+    color:#2c061f;
 }
 #logo{
     width: 100px;
@@ -37,18 +29,15 @@ header{
     position: absolute;
     top: 50%;
     transform: translateY(-50%); 
+    left:100px;
 }
-p{
-    text-align: center;
-    line-height: 1.5;
-    margin: auto;
-}
-main section p:first-child{
-    font-size: 30px;
-}
-main section p:nth-child(2){
-    font-size: 20px;
-    margin-bottom: 20px;
+header nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
+    float: right;
+    padding-right: 50px;
 }
 header p{
     display: inline-block;
@@ -56,28 +45,32 @@ header p{
     font-weight: bold;
     position: absolute;
     top: 50%;
-    left: 350px;
     transform: translateY(-50%);
-    margin: auto;
+    margin: 0px 550px;
 }
-header nav{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    float: right;
-    padding-right: 50px;
+/* The main */
+
+/*First Section*/
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    width: fit-content;
+    margin: 40px auto 20px auto;
+}
+main section p{
+    text-align: center;
+    line-height: 1.5;
+    margin: 10px auto 20px auto;
+    font-size: 20px;
 }
 #form{
-    border: 1px solid #00007f;
+    border: 2px solid #374045;
     width: 500px;
     font-size: 25px;
     text-align: center;
-    display: block;
     padding: 20px;
     line-height: 1.5;
-    
-    margin: auto;
+    margin: 10px auto 20px auto;
 }
 #input{
     width: 150px;
@@ -85,19 +78,58 @@ header nav{
 #submit{
     width: 100px;
     height: 25px;
-    color:#00007f;
+    color:#374045;
+    font-weight: bold;
+}
+/* The Secound Section */
+
+#left-img,#middle-img,#right-img{
+    width: 250px;
+    height: 250px;
+    padding-left: 20px;
+}
+.imgs{
+    width: fit-content;
+   margin:50px auto;
+}
+
+/* The Third Section */
+.third{
+    margin: auto;
+    width: fit-content;
+}
+#show-result{
+    visibility:hidden;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    margin: 10px auto;
+    color:#374045;
     font-weight: bold;
 }
 #Result{
     list-style-type: circle;
     font-size: 20px;
     line-height: 1.5;
-    margin-left:auto;
-    margin-bottom: 30px;
+    margin: 10px auto 20px auto;
+}
+#theChart{
+ margin: 20px auto;
+ width: 1000px !important;
 }
 
+/* The footer*/
 footer{
-    
-    height: 75px;
+    margin:auto;
+    height: 100px;
+    line-height: 1.5;
+    background: linear-gradient(
+      90deg,
+      #f1aa9b 0%,
+      #2c061f 100%);
     text-align: center;
+}
+footer p{
+    padding-top: 50px;
+    font-size: 20px;
 }
