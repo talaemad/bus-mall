@@ -61,7 +61,7 @@ function renderRandomImgs() {
         rightImgIndex = generateRandomIndex();
         // to check that the pic will not appear in the next round
         if (check[0] == -1) {
-            console.log(check[0]);
+        
             check[0] = leftImgIndex; check[1] = middleImgIndex; check[2] = rightImgIndex;
         }
         else {
@@ -142,11 +142,16 @@ function theResult(event) {
         imgView.push(allImg[i].perShown);
     }
     // the chart
+    document.getElementById('title').style.visibility = "visible";
     var ctx = document.getElementById('theChart').getContext('2d');
+   
     var chart = new Chart(ctx, {
         // type of chart 
         type: 'bar',
         // data for dataset
+        title:{
+            text: "Statistics"              
+          },
         data: {
             labels: imgName,
             datasets: [
