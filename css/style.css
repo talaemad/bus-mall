@@ -102,22 +102,30 @@ main section p{
     visibility:hidden;
     font-size: 20px;
     width: 150px;
-    height: 50px;
+    height: 40px;
     margin: 10px auto;
     color:#374045;
     font-weight: bold;
 }
 #Result{
     list-style-type: circle;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 1.5;
     margin: 10px auto 20px auto;
+}
+h2{
+    visibility: hidden;
+    font-size: 30px;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-color: #2c061f;
 }
 #theChart{
  margin: 20px auto;
  width: 1000px !important;
 }
-
 /* The footer*/
 footer{
     margin:auto;
