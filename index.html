@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bus Mall</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -14,14 +17,14 @@
         <img id="logo" src="img/logo.png" alt="">
         <p>The Bus Mall</p>
         <nav>
-            <img src="img/mail.png" alt="">
-            <img src="img/fb.png" alt="">
-            <img src="img/twit.png" alt="">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-youtube-square"></i>
+            <i class="fab fa-twitter-square"></i>
         </nav>
     </header>
     <main>
-        <section>
-            <p>Welcome to vote on some products</p>
+        <section class="first-section">
+            <h1>Welcome to vote on some products</h1>
             <p>We are going to collect the results to enhance our catalog for you</p>
             <form id="form">
                 <fieldset>
@@ -36,19 +39,21 @@
             <img id="middle-img" src="" alt="">
             <img id="right-img" src="" alt="">
         </section>
-        <section>
+        <section class="third">
             <form id="theResult">
                 <input type="submit" value="Show Result" id="show-result">
             </form>
             <ul id="Result"></ul>
-        </section>
-
+            <h2 id="title">Statistics</h2>
+            <canvas id="theChart"></canvas>
+        </section >
     </main>
     <footer>
         <p>
             Bus Mall © 2021 . All Rights Reserved.
         </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/app.js"></script>
 </body>
 
