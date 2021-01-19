@@ -61,7 +61,7 @@ function renderRandomImgs() {
         rightImgIndex = generateRandomIndex();
         // to check that the pic will not appear in the next round
         if (check[0] == -1) {
-        
+
             check[0] = leftImgIndex; check[1] = middleImgIndex; check[2] = rightImgIndex;
         }
         else {
@@ -104,8 +104,7 @@ middleImg.addEventListener('click', handleUserClick);
 rightImg.addEventListener('click', handleUserClick);
 
 function handleUserClick(event) {
-    userAttemptsCounter++;
-    if (userAttemptsCounter <= maxAttempts) {
+    if (userAttemptsCounter < maxAttempts) {
         if (event.target.id === 'left-img') {
             allImg[leftImgIndex].votes++;
         } else if (event.target.id === 'middle-img') {
@@ -114,9 +113,10 @@ function handleUserClick(event) {
         else {
             allImg[rightImgIndex].votes++;
         }
+        userAttemptsCounter++;
         renderRandomImgs();
     }
-    else {
+    if (userAttemptsCounter == maxAttempts) {
         // handle end of voting
         document.getElementById('show-result').style.visibility = "visible";
         var viewResult = document.getElementById('theResult');
@@ -126,6 +126,7 @@ function handleUserClick(event) {
         middleImg.removeEventListener('click', handleUserClick);
         rightImg.removeEventListener('click', handleUserClick);
     }
+
 }
 // function to show the result & the chart
 function theResult(event) {
@@ -141,17 +142,20 @@ function theResult(event) {
         imgVote.push(allImg[i].perVotes);
         imgView.push(allImg[i].perShown);
     }
+    var key = generateRandomKey();
+    setStorage(key);
+
     // the chart
     document.getElementById('title').style.visibility = "visible";
     var ctx = document.getElementById('theChart').getContext('2d');
-   
+
     var chart = new Chart(ctx, {
         // type of chart 
         type: 'bar',
         // data for dataset
-        title:{
-            text: "Statistics"              
-          },
+        title: {
+            text: "Statistics"
+        },
         data: {
             labels: imgName,
             datasets: [
@@ -182,4 +186,37 @@ function percentage() {
     }
 }
 
+// To put data into local Storage
+function setStorage(key) {
+    var storage;
+    if (typeof (Storage) !== "undefined") {
+        for (var i = 0; i < allImg.length; i++) {
+            localStorage.setItem(key + ':' + i, JSON.stringify(allImg[i]));
+        }
+    }
+    addToLocalStorage(key);
+}
 
+function addToLocalStorage(key) {
+    var existing;
+    for (var i = 0; i < allImg.length; i++) {
+        existing = JSON.parse(localStorage.getItem(key + ':' + i));
+    }
+    localStorage.setItem(key, JSON.stringify(existing));
+
+}
+function generateRandom() {
+    return Math.floor(Math.random() * 100);
+}
+
+function generateRandomKey() {
+    var keys = [];
+    var key = 'user ' + generateRandom();
+    var a = keys.indexOf(key);
+    while (a >= 0) {
+        key = 'user ' + generateRandom();
+        a = keys.indexOf(key);
+    }
+    keys.push(key);
+    return key;
+}
