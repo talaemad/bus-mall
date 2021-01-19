@@ -131,14 +131,8 @@ function handleUserClick(event) {
 // function to show the result & the chart
 function theResult(event) {
     event.preventDefault();
-    var results = document.getElementById('Result');
-    results.textContent = ' ';
-    var imgResult;
     percentage();
     for (var i = 0; i < allImg.length; i++) {
-        imgResult = document.createElement('li');
-        imgResult.textContent = allImg[i].name + 'has ' + allImg[i].votes + ' votes and ' + allImg[i].shown + ' viewers';
-        results.appendChild(imgResult);
         imgVote.push(allImg[i].perVotes);
         imgView.push(allImg[i].perShown);
     }

@@ -107,12 +107,6 @@ main section p{
     color:#374045;
     font-weight: bold;
 }
-#Result{
-    list-style-type: circle;
-    font-size: 15px;
-    line-height: 1.5;
-    margin: 10px auto 20px auto;
-}
 h2{
     visibility: hidden;
     font-size: 30px;
