@@ -13,6 +13,7 @@ var rightImgIndex;
 var imgName = [];
 var imgVote = [];
 var imgView = [];
+doChart();
 
 // declare the constractor
 function theImages(name, source) {
@@ -22,6 +23,8 @@ function theImages(name, source) {
     this.shown = 0;
     this.perVotes = 0;
     this.perShown = 0;
+    this.imgTotalView=0;
+    this.imgTotalVote=0;
     allImg.push(this);
     indexImg = allImg.indexOf(this.name);
     imgName.push(name);
@@ -131,18 +134,32 @@ function handleUserClick(event) {
 // function to show the result & the chart
 function theResult(event) {
     event.preventDefault();
-    percentage();
+   // percentage();
     for (var i = 0; i < allImg.length; i++) {
-        imgVote.push(allImg[i].perVotes);
-        imgView.push(allImg[i].perShown);
+        //imgVote.push(allImg[i].perVotes);
+        //imgView.push(allImg[i].perShown);
+        imgVote.push(allImg[i].votes);
+        imgView.push(allImg[i].shown);
     }
+    // add To local
     var key = generateRandomKey();
     setStorage(key);
-
-    // the chart
+    // tvisible the button
     document.getElementById('title').style.visibility = "visible";
+    // Calling Chart
+    doChart();
+    
+}
+// for percentages
+function percentage() {
+    for (var i = 0; i < allImg.length; i++) {
+        allImg[i].perShown = (allImg[i].shown * 100) / maxAttempts;
+        allImg[i].perVotes = (allImg[i].votes * 100) / maxAttempts;
+    }
+}
+// Chart
+function doChart(){
     var ctx = document.getElementById('theChart').getContext('2d');
-
     var chart = new Chart(ctx, {
         // type of chart 
         type: 'bar',
@@ -172,13 +189,6 @@ function theResult(event) {
         options: {}
     });
 }
-// for percentages
-function percentage() {
-    for (var i = 0; i < allImg.length; i++) {
-        allImg[i].perShown = (allImg[i].shown * 100) / maxAttempts;
-        allImg[i].perVotes = (allImg[i].votes * 100) / maxAttempts;
-    }
-}
 
 // To put data into local Storage
 function setStorage(key) {
@@ -194,7 +204,7 @@ function setStorage(key) {
 function addToLocalStorage(key) {
     var existing;
     for (var i = 0; i < allImg.length; i++) {
-        existing = JSON.parse(localStorage.getItem(key + ':' + i));
+        existing = JSON.parse(localStorage.getItem(key + ':' + i));    
     }
     localStorage.setItem(key, JSON.stringify(existing));
 
@@ -214,3 +224,4 @@ function generateRandomKey() {
     keys.push(key);
     return key;
 }
+

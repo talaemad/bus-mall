@@ -19,6 +19,7 @@ i{
     font-size: 30px;
     color:#ffeebb;
     padding: 5px;
+    box-shadow: 5px 5px #2c061f;
 }
 i:hover{
     color:#2c061f;
@@ -47,6 +48,7 @@ header p{
     top: 50%;
     transform: translateY(-50%);
     margin: 0px 550px;
+    text-shadow: 2px 1px #374045;
 }
 /* The main */
 
@@ -80,6 +82,7 @@ main section p{
     height: 25px;
     color:#374045;
     font-weight: bold;
+    box-shadow: 5px 5px #2c061f;
 }
 /* The Secound Section */
 
